@@ -21,7 +21,7 @@ vminst=`virsh list|grep -i running|tail -1|awk '{print $2}'`
 echo vminst=$vminst
 echo virsh attach-disk $vminst /opt/iso/disk2.img sdb
 
-# default openastack kvm qcow imahe has 8G root / == /dev/vda1
+# default openastack kvm qcow image has 8G root / == /dev/vda1
 # need lots more space
 qemu-img create -f raw CentOS-8-ec2-8.3.2011-20201204.2.x86_64.qcow2 128G
 virt-resize --expand /dev/vda1 8gCentOS-8-ec2-8.3.2011-20201204.2.x86_64.qcow2 CentOS-8-ec2-8.3.2011-20201204.2.x86_64.qcow2
