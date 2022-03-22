@@ -1,0 +1,15 @@
+<network>
+  <name>virbr0</name>
+  <bridge name="virbr0"/>
+  <forward mode='nat'>
+    <nat>
+      <address start="172.17.0.100" end="172.17.0.199"/>
+    </nat>
+  </forward>
+    <dhcp>
+      <host mac='52:54:00:aa:bb:10' name='mothership' ip='172.17.0.10'/>
+      <host mac='52:54:00:aa:bb:11' name='mothership' ip='172.17.0.11'/>
+      <host mac='52:54:00:aa:bb:12' name='mothership' ip='172.17.0.12'/>
+    </dhcp>
+</network>
+
